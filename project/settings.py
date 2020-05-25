@@ -1,4 +1,5 @@
 import os
+from os.path import join
 
 import dj_database_url
 import environ
@@ -185,13 +186,15 @@ TEMPLATES = [
     },
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.0/howto/static-files/
+STATICFILES_DIRS = []
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
 
 CACHES = {'default': env.cache(default='memcache://127.0.0.1:11211?key_prefix=project')}
-
-LOGIN_URL = "/login/"
-
-SESSION_SERIALIZER = "django.contrib.sessions.serializers.PickleSerializer"
 
 SHUUP_PRICING_MODULE = "customer_group_pricing"
 

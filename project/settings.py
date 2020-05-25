@@ -194,11 +194,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
-
 CACHES = {'default': env.cache(default='memcache://127.0.0.1:11211?key_prefix=project')}
 
 SHUUP_PRICING_MODULE = "customer_group_pricing"

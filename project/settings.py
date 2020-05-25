@@ -25,8 +25,8 @@ DATABASES = {'default': dj_database_url.config(default='postgres:///snix_shuup_d
 MEDIA_URL = env('MEDIA_URL', default='/media/')
 STATIC_URL = env('STATIC_URL', default='/static/')
 
-MEDIA_ROOT = root(env('MEDIA_LOCATION', default=os.path.join(BASE_DIR, 'var', 'media')))
-STATIC_ROOT = root(env('STATIC_LOCATION', default=os.path.join(BASE_DIR, 'var', 'static')))
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 SHUUP_HOME_CURRENCY = env('SHOP_CURRENCY', default='USD')
 
@@ -115,6 +115,8 @@ MIDDLEWARE_CLASSES = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 ROOT_URLCONF = 'project.urls'
 WSGI_APPLICATION = 'project.wsgi.application'
 LANGUAGE_CODE = env('LANGUAGE_CODE', default='en')
@@ -188,7 +190,10 @@ TEMPLATES = [
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-STATICFILES_DIRS = []
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',

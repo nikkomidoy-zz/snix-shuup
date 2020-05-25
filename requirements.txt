@@ -18,7 +18,7 @@ cryptography==2.4.2       # via secretstorage
 cssselect2==0.2.1         # via cairosvg, weasyprint
 defusedxml==0.5.0         # via cairosvg
 dj-database-url==0.5.0
-django==1.11.17           # via django-filer, django-jinja, django-mptt, django-polymorphic, django-reversion, django-timezone-field, easy-thumbnails, jsonfield, shuup
+django==1.11.28           # via django-filer, django-jinja, django-mptt, django-polymorphic, django-reversion, django-timezone-field, easy-thumbnails, jsonfield, shuup
 django-bootstrap3==9.1.0  # via shuup
 django-countries==5.2     # via shuup
 django-enumfields==0.9.0  # via shuup

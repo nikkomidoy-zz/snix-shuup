@@ -15,11 +15,11 @@ BASE_DIR = root()
 
 DEBUG = env('DEBUG')
 
-env.read_env(os.path.join(BASE_DIR, 'shuup-project-template', '.env'))
+env.read_env(os.path.join(BASE_DIR, 'snix-shuup', '.env'))
 
 SECRET_KEY = env('SECRET_KEY', default='xxx')
 
-DATABASES = {'default': dj_database_url.config(default='sqlite:///db.sqlite3')}
+DATABASES = {'default': dj_database_url.config(default='postgres:///snix_shuup_db')}
 
 MEDIA_URL = env('MEDIA_URL', default='/media/')
 STATIC_URL = env('STATIC_URL', default='/static/')
@@ -109,7 +109,9 @@ MIDDLEWARE_CLASSES = [
     'shuup.core.middleware.ShuupMiddleware',
     'shuup.front.middleware.ShuupFrontMiddleware',
     'shuup.xtheme.middleware.XthemeMiddleware',
-    'shuup.admin.middleware.ShuupAdminMiddleware'
+    'shuup.admin.middleware.ShuupAdminMiddleware',
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -183,6 +185,8 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 CACHES = {'default': env.cache(default='memcache://127.0.0.1:11211?key_prefix=project')}
 
 LOGIN_URL = "/login/"
@@ -234,3 +238,5 @@ SHUUP_ERROR_PAGE_HANDLERS_SPEC = [
 ]
 
 SHUUP_SIMPLE_SEARCH_LIMIT = 150
+
+SHUUP_ADDRESS_HOME_COUNTRY = "PH"

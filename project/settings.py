@@ -10,7 +10,7 @@ def optenv(var):
     return env(var, default=None)
 
 
-root = environ.Path(__file__) - 3
+root = environ.Path(__file__) - 2
 
 BASE_DIR = root()
 

@@ -7,7 +7,7 @@
 asn1crypto==0.24.0        # via cryptography
 babel==2.5.3              # via shuup
 cairocffi==0.9.0          # via cairosvg, weasyprint
-cairosvg==2.2.1           # via weasyprint
+cairosvg==2.5.1           # via weasyprint
 certifi==2018.11.29       # via requests
 cffi==1.11.5              # via cairocffi, cryptography, weasyprint
 chardet==3.0.4            # via requests

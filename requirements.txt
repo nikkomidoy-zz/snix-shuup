@@ -65,7 +65,7 @@ python-dateutil==2.7.5    # via shuup
 python-memcached==1.59
 pytoml==0.1.20            # via shuup
 pytz==2018.7              # via babel, django, django-timezone-field, shuup
-pyyaml==3.13              # via shuup-yaml
+pyyaml==5.4              # via shuup-yaml
 raven==5.33.0
 requests==2.21.0
 secretstorage==2.3.1      # via shuup

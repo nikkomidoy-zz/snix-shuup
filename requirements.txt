@@ -70,7 +70,7 @@ raven==5.33.0
 requests==2.21.0
 secretstorage==2.3.1      # via shuup
 setuptools-gitver==1.1.0  # via shuup-yaml
-shuup==1.8.1
+shuup==2.11.0
 shuup-stripe==0.8.6
 shuup-yaml==1.0.1b2
 simplejson==3.16.0        # via django-rest-swagger

@@ -51,7 +51,7 @@ jinja2==2.8.1             # via coreschema, django-jinja, shuup
 jsonfield==2.0.2          # via shuup
 keyring==17.1.1           # via shuup
 keyrings.alt==3.1.1       # via shuup
-lxml==4.2.1               # via shuup
+lxml==4.6.5               # via shuup
 markdown==2.6.11          # via shuup
 markupsafe==1.1.0         # via jinja2
 openapi-codec==1.3.2      # via django-rest-swagger

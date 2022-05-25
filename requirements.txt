@@ -59,7 +59,7 @@ openpyxl==2.5.12          # via shuup
 pillow==5.4.0             # via cairosvg, easy-thumbnails
 psycopg2-binary==2.8.5
 pycparser==2.19           # via cffi
-pyjwt==1.7.1              # via djangorestframework-jwt
+pyjwt==2.4.0              # via djangorestframework-jwt
 pyphen==0.9.5             # via weasyprint
 python-dateutil==2.7.5    # via shuup
 python-memcached==1.59
